@@ -1,5 +1,6 @@
 import sys
 from module_core import create_file, create_folder, get_list, delete_file, copy_file, safe_info, change_dir
+from module_play import play
 
 
 safe_info('Старт')
@@ -56,6 +57,8 @@ else:
             print('Отсутствует путь')
         else:
             change_dir(path)
+    elif command == 'play':
+        play()
     elif command == 'help':
         print('list - список файлов и папок')
         print('create_file - создание файла')
@@ -63,6 +66,7 @@ else:
         print('delete - удаление файла или папки')
         print('copy - копирование файла или папки')
         print('change_dir - сменить текущую директорию')
+        print('play - сыграть в игру')
     else:
         print('Для помощи введите: main.py help')
 
